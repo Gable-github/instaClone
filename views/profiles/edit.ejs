@@ -1,0 +1,12 @@
+<form action="/profiles/<%= profile.id %>?_method=PUT" method="POST">
+    <label>Profile name:</label>
+    <input type="text" name="name" value="<%= profile.name %>">
+    <br>
+    <label>Bio:</label>
+    <input type="text" name="bio" value="<%= profile.bio %>">
+    <br>
+    <button type="submit">Update Profile</button>
+    <a href="/profiles">Cancel</a>
+</form>
+
+<%- include("../partials/errorMessage") %>

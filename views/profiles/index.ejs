@@ -1,0 +1,7 @@
+<h2>Registered profiles</h2>
+
+
+<% profiles.forEach(profile => { %>
+    <div><a href="/profiles/<%= profile.id %>"><%= profile.name %></a></div>
+    <%- include('../partials/deleteForm', { url: `/profiles/${profile.id}` }) %> 
+<% }) %>
